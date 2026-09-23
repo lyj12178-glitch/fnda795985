@@ -68,12 +68,14 @@
   <header class="fixed top-0 left-0 w-full z-50 bg-shinsegae-darkgreen/90 backdrop-blur-md border-b border-shinsegae-gold/20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <span class="text-xs uppercase tracking-[0.3em] font-serif text-shinsegae-gold font-bold">SHINSEGAE</span>
-        <div class="h-4 w-px bg-shinsegae-gold/40"></div>
-        <span class="font-bold tracking-wider text-sm sm:text-base text-white">LUGGAGE PASS</span>
+        <a href="#hero" class="flex items-center space-x-3">
+          <span class="text-xs uppercase tracking-[0.3em] font-serif text-shinsegae-gold font-bold">SHINSEGAE</span>
+          <div class="h-4 w-px bg-shinsegae-gold/40"></div>
+          <span class="font-bold tracking-wider text-sm sm:text-base text-white">LUGGAGE PASS</span>
+        </a>
       </div>
 
-      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-stone-300">
+      <nav class="hidden md:flex items-center space-x-7 text-sm font-medium text-stone-300">
         <a href="#hero" class="hover:text-shinsegae-lightgold transition-colors">소개</a>
         <a href="#video-section" class="text-shinsegae-gold font-semibold hover:text-white transition-colors flex items-center gap-1.5">
           <i class="fa-solid fa-play text-xs"></i> 홍보 쇼츠 영상
@@ -81,10 +83,20 @@
         <a href="#features" class="hover:text-shinsegae-lightgold transition-colors">4대 혜택</a>
         <a href="#process" class="hover:text-shinsegae-lightgold transition-colors">이용 가이드</a>
         <a href="#pricing" class="hover:text-shinsegae-lightgold transition-colors">패스 가격</a>
+        <!-- 오픈로드맵 & 설문조사 메뉴 -->
+        <a href="#roadmap" class="hover:text-shinsegae-lightgold transition-colors flex items-center gap-1">
+          <i class="fa-solid fa-route text-xs text-shinsegae-gold"></i> 오픈로드맵
+        </a>
+        <a href="./01/web1.html" class="bg-shinsegae-gold/15 hover:bg-shinsegae-gold/25 text-shinsegae-lightgold hover:text-white px-3 py-1.5 rounded-full border border-shinsegae-gold/40 transition-all duration-200 flex items-center gap-1.5 font-semibold">
+          <i class="fa-regular fa-clipboard-list text-shinsegae-gold"></i> 설문조사
+        </a>
       </nav>
 
-      <div>
-        <a href="#pricing" class="bg-gradient-to-r from-shinsegae-burgundy to-shinsegae-deepburgundy text-white px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide border border-shinsegae-gold/30 hover:shadow-lg hover:border-shinsegae-gold transition-all duration-300">
+      <div class="flex items-center gap-2">
+        <a href="./01/web1.html" class="md:hidden text-xs bg-shinsegae-gold/20 text-shinsegae-lightgold px-3 py-2 rounded-full border border-shinsegae-gold/40 font-semibold">
+          설문조사
+        </a>
+        <a href="#pricing" class="bg-gradient-to-r from-shinsegae-burgundy to-shinsegae-deepburgundy text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide border border-shinsegae-gold/30 hover:shadow-lg hover:border-shinsegae-gold transition-all duration-300">
           패스 예약하기
         </a>
       </div>
@@ -151,11 +163,18 @@
         </div>
       </div>
 
-      <!-- Quick Scroll Anchor Button -->
-      <a href="#video-section" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-shinsegae-gold hover:text-white transition">
-        <span>공식 50초 쇼츠 영상 바로보기</span>
-        <i class="fa-solid fa-chevron-down animate-bounce"></i>
-      </a>
+      <!-- Quick Scroll & Survey Action Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="#video-section" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-shinsegae-gold hover:text-white transition">
+          <span>공식 50초 쇼츠 영상 바로보기</span>
+          <i class="fa-solid fa-chevron-down animate-bounce"></i>
+        </a>
+        <span class="text-stone-600 hidden sm:inline">•</span>
+        <a href="./01/web1.html" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-shinsegae-lightgold hover:underline transition">
+          <i class="fa-regular fa-comments"></i>
+          <span>고객 설문조사 바로가기</span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -198,14 +217,14 @@
                 preload="metadata"
                 loop
               >
-                <!-- GitHub Pages & Local file naming priority -->
+                <!-- Priority file sources -->
                 <source src="영상 완성도.mp4" type="video/mp4">
                 <source src="./영상 완성도.mp4" type="video/mp4">
                 <source src="%EC%98%81%EC%83%81%20%EC%99%84%EC%84%B1%EB%8F%84.mp4" type="video/mp4">
                 브라우저가 HTML5 비디오를 지원하지 않습니다.
               </video>
 
-              <!-- Video UI Overlays (Reels / Shorts Style) -->
+              <!-- Video UI Overlays -->
               <div class="absolute top-4 left-4 right-4 flex items-center justify-between text-white text-xs z-20 pointer-events-none drop-shadow">
                 <span class="bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20 font-medium">
                   <i class="fa-solid fa-film text-shinsegae-gold mr-1"></i> 9:16 SHORTS
@@ -232,7 +251,7 @@
                 <i class="fa-solid fa-play" id="bigPlayIcon"></i>
               </button>
 
-              <!-- Floating Right Action Icons (Shorts Mockup) -->
+              <!-- Floating Right Action Icons -->
               <div class="absolute right-3 bottom-16 z-20 flex flex-col items-center gap-4 text-white">
                 <button type="button" class="flex flex-col items-center gap-1 hover:text-shinsegae-gold transition">
                   <div class="w-9 h-9 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center text-sm border border-white/20">
@@ -282,7 +301,7 @@
             </div>
           </div>
 
-          <!-- Local File Selector for Safety (GitHub or Local Offline Testing) -->
+          <!-- Local File Selector -->
           <div class="mt-4 w-full max-w-[340px] text-center">
             <label 
               for="localVideoPicker" 
@@ -293,7 +312,7 @@
             </label>
             <input type="file" id="localVideoPicker" accept="video/mp4,video/*" class="hidden">
             <p class="text-[11px] text-stone-400 mt-1.5 leading-snug">
-              깃허브 레포지토리에 <code class="text-shinsegae-lightgold">영상 완성도.mp4</code>를 같은 폴더에 올리면 자동 재생되며, 오프라인 환경에서는 위 버튼으로 직접 지정할 수 있습니다.
+              같은 폴더에 <code class="text-shinsegae-lightgold">영상 완성도.mp4</code>가 있으면 자동 로드되며, 수동 선택도 가능합니다.
             </p>
           </div>
         </div>
@@ -549,6 +568,25 @@
 
       </div>
 
+      <!-- Dedicated Roadmap Banner -->
+      <div id="roadmap" class="mt-16 bg-gradient-to-r from-shinsegae-cardbg via-black/60 to-shinsegae-cardbg border border-shinsegae-gold/30 rounded-3xl p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs font-mono text-shinsegae-gold uppercase tracking-wider mb-2">
+            <i class="fa-solid fa-compass"></i> OPEN ROADMAP
+          </div>
+          <h3 class="text-2xl font-extrabold text-white">신세계 러기지패스 오픈 로드맵</h3>
+          <p class="text-stone-300 text-sm mt-1 max-w-xl">
+            본점 시범 운영(1단계)을 시작으로 강남점/센텀시티점 확대(2단계), 김해/김포/제주공항 및 글로벌 제휴 항공사 연계(3단계)로 확장됩니다.
+          </p>
+        </div>
+        <div class="flex items-center gap-3 w-full md:w-auto">
+          <a href="./01/web1.html" class="flex-1 md:flex-none text-center px-6 py-3.5 bg-gradient-to-r from-shinsegae-gold to-[#a9833a] hover:brightness-110 text-black font-extrabold text-sm rounded-xl transition shadow-lg flex items-center justify-center gap-2">
+            <i class="fa-solid fa-square-poll-vertical"></i>
+            <span>설문조사 참여하기</span>
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -701,11 +739,15 @@
         </p>
       </div>
 
-      <div class="flex items-center gap-6 text-stone-400">
+      <div class="flex flex-wrap items-center justify-center gap-5 sm:gap-6 text-stone-400">
         <a href="#hero" class="hover:text-shinsegae-gold transition">홈으로</a>
         <a href="#video-section" class="hover:text-shinsegae-gold transition">홍보 쇼츠</a>
         <a href="#features" class="hover:text-shinsegae-gold transition">서비스 안내</a>
         <a href="#pricing" class="hover:text-shinsegae-gold transition">패스 요금</a>
+        <a href="#roadmap" class="hover:text-shinsegae-gold transition">오픈로드맵</a>
+        <a href="./01/web1.html" class="text-shinsegae-gold hover:text-shinsegae-lightgold font-bold transition flex items-center gap-1">
+          <i class="fa-regular fa-clipboard"></i> 설문조사
+        </a>
       </div>
     </div>
   </footer>
@@ -741,8 +783,7 @@
         }).catch(err => {
           console.warn("Autoplay block or missing file:", err);
           updatePlayUI(false);
-          // Gently inform user
-          showNotice("영상이 아직 선택되지 않았거나 브라우저 정책으로 차단되었습니다. 아래 '내 컴퓨터에서 영상 파일 불러오기' 버튼을 사용해보세요.");
+          showNotice("영상이 아직 준비되지 않았거나 브라우저 정책으로 차단되었습니다. 아래 '내 컴퓨터에서 영상 완성도.mp4 불러오기' 버튼을 사용해보세요.");
         });
       } else {
         video.pause();
@@ -803,24 +844,21 @@
       if (video.paused) {
         video.play().then(() => updatePlayUI(true)).catch(() => updatePlayUI(false));
       }
-      // Scroll smoothly to video section if not fully in view
       const videoSection = document.getElementById('video-section');
       if (videoSection) {
         videoSection.scrollIntoView({ behavior: 'smooth' });
       }
     };
 
-    // Handling Local Upload ( 영상 완성도.mp4 file picker )
+    // Handling Local Upload (영상 완성도.mp4 file picker)
     localVideoPicker.addEventListener('change', function(event) {
       const file = event.target.files[0];
       if (!file) return;
 
-      // Revoke previous blob URL if any to free memory
       if (video.src && video.src.startsWith('blob:')) {
         URL.revokeObjectURL(video.src);
       }
 
-      // Create new blob object URL from chosen file
       const objectUrl = URL.createObjectURL(file);
       video.src = objectUrl;
       video.load();
@@ -836,7 +874,7 @@
       };
     });
 
-    // Custom Toast Notice (never alert)
+    // Custom Toast Notice (avoiding alert)
     function showNotice(message) {
       let toast = document.getElementById('customToast');
       if (!toast) {
@@ -852,7 +890,7 @@
       }, 4000);
     }
 
-    // Pass Booking Modal simulation
+    // Pass Booking modal simulation
     window.handlePassBooking = function(passName) {
       showNotice(`${passName} 사전 예약 창으로 연결됩니다. (현장 웰컴센터 및 온라인 수령 가능)`);
     };
