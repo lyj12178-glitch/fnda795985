@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUGGAGE PASS — 쇼핑은 더 많이, 짐은 더 가볍게 | 신세계백화점</title>
+  
+  <!-- Google Fonts & Tailwind CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            shinsegae: {
+              green: '#00382B',
+              darkgreen: '#00251C',
+              burgundy: '#6E1626',
+              deepburgundy: '#4A0C18',
+              gold: '#C5A059',
+              lightgold: '#EAD39C',
+              sand: '#F7F4EE',
+              cardbg: '#0E2820',
+            }
+          },
+          fontFamily: {
+            sans: ['"Noto Sans KR"', 'sans-serif'],
+            serif: ['"Cinzel"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Luxury Styling */
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #F5DFAD 0%, #C5A059 50%, #9F7E3C 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-border-glow {
+      box-shadow: 0 0 25px rgba(197, 160, 89, 0.25);
+    }
+    .video-mask-container {
+      aspect-ratio: 9 / 16;
+      max-height: 720px;
+    }
+    /* Hide scrollbar for neat reel effect */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-shinsegae-darkgreen text-stone-100 font-sans antialiased selection:bg-shinsegae-gold selection:text-black">
+
+  <header class="fixed top-0 left-0 w-full z-50 bg-shinsegae-darkgreen/90 backdrop-blur-md border-b border-shinsegae-gold/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <span class="text-xs uppercase tracking-[0.3em] font-serif text-shinsegae-gold font-bold">SHINSEGAE</span>
+        <div class="h-4 w-px bg-shinsegae-gold/40"></div>
+        <span class="font-bold tracking-wider text-sm sm:text-base text-white">LUGGAGE PASS</span>
+      </div>
+
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-stone-300">
+        <a href="#hero" class="hover:text-shinsegae-lightgold transition-colors">소개</a>
+        <a href="#video-section" class="text-shinsegae-gold font-semibold hover:text-white transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-play text-xs"></i> 홍보 쇼츠 영상
+        </a>
+        <a href="#features" class="hover:text-shinsegae-lightgold transition-colors">4대 혜택</a>
+        <a href="#process" class="hover:text-shinsegae-lightgold transition-colors">이용 가이드</a>
+        <a href="#pricing" class="hover:text-shinsegae-lightgold transition-colors">패스 가격</a>
+      </nav>
+
+      <div>
+        <a href="#pricing" class="bg-gradient-to-r from-shinsegae-burgundy to-shinsegae-deepburgundy text-white px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide border border-shinsegae-gold/30 hover:shadow-lg hover:border-shinsegae-gold transition-all duration-300">
+          패스 예약하기
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section id="hero" class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden border-b border-stone-800">
+    <!-- Ambient Backdrop Glows -->
+    <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-shinsegae-green/40 blur-[130px] rounded-full pointer-events-none"></div>
+    <div class="absolute -top-20 right-0 w-[400px] h-[400px] bg-shinsegae-burgundy/20 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-shinsegae-burgundy/60 border border-shinsegae-gold/40 text-shinsegae-lightgold text-xs sm:text-sm font-medium tracking-wide mb-6">
+        <span class="w-2 h-2 rounded-full bg-shinsegae-gold animate-pulse"></span>
+        신세계백화점 외국인 전용 올인원 핸즈프리 쇼핑
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-4 leading-tight">
+        쇼핑은 더 많이, <br class="sm:hidden" />
+        <span class="gold-gradient-text">짐은 더 가볍게.</span>
+      </h1>
+      
+      <p class="font-serif text-lg sm:text-2xl text-shinsegae-lightgold font-medium tracking-widest uppercase mb-6">
+        Shop more. Carry less. — LUGGAGE PASS
+      </p>
+
+      <p class="max-w-2xl mx-auto text-sm sm:text-base text-stone-300 leading-relaxed font-light mb-10">
+        결제부터 보관, 매장 자동 집결, 인천공항 직송 수령까지!<br>
+        더 이상 양손 가득 짐을 들고 다니지 마세요. 신세계가 당신의 여행을 두 손 가볍게 만들어 드립니다.
+      </p>
+
+      <!-- 4 Pillars Summary Pills -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12">
+        <div class="bg-shinsegae-green/50 border border-shinsegae-gold/30 rounded-2xl p-4 text-center backdrop-blur-sm hover:border-shinsegae-gold transition">
+          <div class="w-10 h-10 mx-auto rounded-full bg-shinsegae-gold/10 text-shinsegae-gold flex items-center justify-center text-lg mb-2">
+            <i class="fa-regular fa-credit-card"></i>
+          </div>
+          <h4 class="font-bold text-white text-sm">PAY</h4>
+          <p class="text-xs text-stone-400 mt-1">선충전 간편 통합결제</p>
+        </div>
+
+        <div class="bg-shinsegae-green/50 border border-shinsegae-gold/30 rounded-2xl p-4 text-center backdrop-blur-sm hover:border-shinsegae-gold transition">
+          <div class="w-10 h-10 mx-auto rounded-full bg-shinsegae-gold/10 text-shinsegae-gold flex items-center justify-center text-lg mb-2">
+            <i class="fa-solid fa-bag-shopping"></i>
+          </div>
+          <h4 class="font-bold text-white text-sm">COLLECT</h4>
+          <p class="text-xs text-stone-400 mt-1">구매 상품 자동 한곳 집결</p>
+        </div>
+
+        <div class="bg-shinsegae-green/50 border border-shinsegae-gold/30 rounded-2xl p-4 text-center backdrop-blur-sm hover:border-shinsegae-gold transition">
+          <div class="w-10 h-10 mx-auto rounded-full bg-shinsegae-gold/10 text-shinsegae-gold flex items-center justify-center text-lg mb-2">
+            <i class="fa-solid fa-plane-departure"></i>
+          </div>
+          <h4 class="font-bold text-white text-sm">DELIVER</h4>
+          <p class="text-xs text-stone-400 mt-1">공항 데스크까지 직송 배송</p>
+        </div>
+
+        <div class="bg-shinsegae-green/50 border border-shinsegae-gold/30 rounded-2xl p-4 text-center backdrop-blur-sm hover:border-shinsegae-gold transition">
+          <div class="w-10 h-10 mx-auto rounded-full bg-shinsegae-gold/10 text-shinsegae-gold flex items-center justify-center text-lg mb-2">
+            <i class="fa-regular fa-gem"></i>
+          </div>
+          <h4 class="font-bold text-white text-sm">MEMBERSHIP</h4>
+          <p class="text-xs text-stone-400 mt-1">글로벌 라운지 & 리워드</p>
+        </div>
+      </div>
+
+      <!-- Quick Scroll Anchor Button -->
+      <a href="#video-section" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-shinsegae-gold hover:text-white transition">
+        <span>공식 50초 쇼츠 영상 바로보기</span>
+        <i class="fa-solid fa-chevron-down animate-bounce"></i>
+      </a>
+    </div>
+  </section>
+
+  <section id="video-section" class="relative py-20 bg-gradient-to-b from-shinsegae-darkgreen via-[#081a14] to-shinsegae-darkgreen border-b border-shinsegae-gold/15">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title & Meta -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-shinsegae-gold mb-2">
+            <span class="w-2 h-2 rounded-full bg-shinsegae-burgundy"></span>
+            핵심 홍보물 3.3 공식 영상
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+            두 손은 가볍게, 쇼핑은 더 설레게<br>
+            <span class="gold-gradient-text">“영상 완성도” 공식 쇼츠 릴리즈</span>
+          </h2>
+        </div>
+        <div class="text-stone-400 text-xs sm:text-sm max-w-md">
+          인스타그램 릴스, 유튜브 쇼츠, 틱톡 및 미디어월 루프 상영용 <strong>50초 공식 세로형 영상</strong>입니다.
+          타깃 페르소나 ‘칭칭’의 쇼핑 피로 해결부터 공항 수령까지 한눈에 감상하세요.
+        </div>
+      </div>
+
+      <!-- Main Video Display Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: 9:16 Shorts Mockup Frame -->
+        <div class="lg:col-span-5 flex flex-col items-center">
+          <div class="relative w-full max-w-[340px] rounded-3xl p-2 bg-gradient-to-b from-shinsegae-gold/40 via-stone-800 to-shinsegae-gold/20 shadow-2xl gold-border-glow">
+            
+            <!-- Phone Inner Frame -->
+            <div class="relative bg-black rounded-[22px] overflow-hidden video-mask-container w-full flex items-center justify-center">
+              
+              <!-- Video Tag configured for '영상 완성도.mp4' & fallback upload support -->
+              <video 
+                id="shortsVideo" 
+                class="w-full h-full object-cover cursor-pointer"
+                playsinline 
+                preload="metadata"
+                loop
+              >
+                <!-- GitHub Pages & Local file naming priority -->
+                <source src="영상 완성도.mp4" type="video/mp4">
+                <source src="./영상 완성도.mp4" type="video/mp4">
+                <source src="%EC%98%81%EC%83%81%20%EC%99%84%EC%84%B1%EB%8F%84.mp4" type="video/mp4">
+                브라우저가 HTML5 비디오를 지원하지 않습니다.
+              </video>
+
+              <!-- Video UI Overlays (Reels / Shorts Style) -->
+              <div class="absolute top-4 left-4 right-4 flex items-center justify-between text-white text-xs z-20 pointer-events-none drop-shadow">
+                <span class="bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20 font-medium">
+                  <i class="fa-solid fa-film text-shinsegae-gold mr-1"></i> 9:16 SHORTS
+                </span>
+                <span class="bg-shinsegae-burgundy/80 backdrop-blur-md px-2.5 py-1 rounded-full font-semibold border border-white/20">
+                  50 SEC
+                </span>
+              </div>
+
+              <!-- Top Filename Badge -->
+              <div class="absolute top-12 left-4 z-20 pointer-events-none">
+                <span class="bg-black/70 backdrop-blur-sm text-[11px] text-stone-200 px-2 py-0.5 rounded-md border border-white/10 flex items-center gap-1.5">
+                  <i class="fa-solid fa-video text-shinsegae-gold text-[10px]"></i> 영상 완성도.mp4
+                </span>
+              </div>
+
+              <!-- Center Big Play Button (shows when paused) -->
+              <button 
+                id="bigPlayButton" 
+                type="button" 
+                class="absolute z-20 w-16 h-16 rounded-full bg-black/60 border border-shinsegae-gold/70 text-shinsegae-gold flex items-center justify-center text-2xl pl-1 shadow-xl hover:scale-110 active:scale-95 transition-all"
+                aria-label="영상 재생/일시정지"
+              >
+                <i class="fa-solid fa-play" id="bigPlayIcon"></i>
+              </button>
+
+              <!-- Floating Right Action Icons (Shorts Mockup) -->
+              <div class="absolute right-3 bottom-16 z-20 flex flex-col items-center gap-4 text-white">
+                <button type="button" class="flex flex-col items-center gap-1 hover:text-shinsegae-gold transition">
+                  <div class="w-9 h-9 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center text-sm border border-white/20">
+                    <i class="fa-solid fa-heart text-red-500"></i>
+                  </div>
+                  <span class="text-[10px] font-bold">2.4k</span>
+                </button>
+                <button type="button" class="flex flex-col items-center gap-1 hover:text-shinsegae-gold transition">
+                  <div class="w-9 h-9 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center text-sm border border-white/20">
+                    <i class="fa-solid fa-share-nodes"></i>
+                  </div>
+                  <span class="text-[10px] font-bold">공유</span>
+                </button>
+              </div>
+
+              <!-- Bottom Timeline & Subtitle Preview Overlay -->
+              <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black via-black/70 to-transparent z-20 pointer-events-none">
+                <div class="flex items-center justify-between text-[11px] text-stone-300 font-mono mb-1.5">
+                  <span id="currentTimeDisplay">00:00</span>
+                  <span id="durationDisplay">00:50</span>
+                </div>
+                <div class="w-full bg-white/20 h-1 rounded-full overflow-hidden">
+                  <div id="videoProgressBar" class="h-full bg-shinsegae-gold w-0 transition-all duration-100"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Player Bottom Bar Controls -->
+            <div class="mt-3 flex items-center gap-2 w-full px-1">
+              <button 
+                id="mainPlayToggleBtn" 
+                type="button" 
+                class="flex-1 py-2.5 px-4 bg-gradient-to-r from-shinsegae-gold to-[#a9833a] text-black font-bold text-xs sm:text-sm rounded-xl flex items-center justify-center gap-2 hover:brightness-110 active:scale-98 transition shadow"
+              >
+                <i class="fa-solid fa-play" id="btnPlayIcon"></i>
+                <span id="btnPlayText">쇼츠 영상 재생</span>
+              </button>
+
+              <button 
+                id="muteToggleBtn" 
+                type="button" 
+                class="w-10 h-10 bg-stone-900 border border-stone-700 text-stone-300 rounded-xl flex items-center justify-center text-sm hover:text-white hover:border-shinsegae-gold transition"
+                title="음소거 켜기/끄기"
+              >
+                <i class="fa-solid fa-volume-high" id="muteIcon"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Local File Selector for Safety (GitHub or Local Offline Testing) -->
+          <div class="mt-4 w-full max-w-[340px] text-center">
+            <label 
+              for="localVideoPicker" 
+              class="w-full inline-flex items-center justify-center gap-2 py-2 px-3 text-xs font-medium text-stone-300 bg-shinsegae-burgundy/80 hover:bg-shinsegae-burgundy border border-shinsegae-gold/40 rounded-xl cursor-pointer transition shadow-sm"
+            >
+              <i class="fa-solid fa-arrow-up-from-bracket text-shinsegae-lightgold"></i>
+              <span>내 컴퓨터에서 <strong>영상 완성도.mp4</strong> 불러오기</span>
+            </label>
+            <input type="file" id="localVideoPicker" accept="video/mp4,video/*" class="hidden">
+            <p class="text-[11px] text-stone-400 mt-1.5 leading-snug">
+              깃허브 레포지토리에 <code class="text-shinsegae-lightgold">영상 완성도.mp4</code>를 같은 폴더에 올리면 자동 재생되며, 오프라인 환경에서는 위 버튼으로 직접 지정할 수 있습니다.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Storyboard & Timeline Navigator -->
+        <div class="lg:col-span-7 bg-shinsegae-cardbg/80 border border-shinsegae-gold/25 rounded-3xl p-6 sm:p-8 backdrop-blur-md">
+          <div class="flex items-center justify-between border-b border-stone-700/80 pb-4 mb-6">
+            <div>
+              <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                <i class="fa-regular fa-clock text-shinsegae-gold"></i> 영상 내러티브 타임라인
+              </h3>
+              <p class="text-xs text-stone-400">클릭 시 해당 핵심 장면으로 즉시 이동하여 재생됩니다.</p>
+            </div>
+            <span class="text-xs font-mono px-2.5 py-1 rounded bg-shinsegae-green border border-shinsegae-gold/30 text-shinsegae-lightgold">
+              전체 50초 완성본
+            </span>
+          </div>
+
+          <!-- Interactive Timecode Cards -->
+          <div class="space-y-3">
+            
+            <!-- Chapter 1 -->
+            <button 
+              type="button" 
+              onclick="seekToSeconds(0)" 
+              class="w-full text-left p-3.5 rounded-2xl bg-black/30 border border-white/5 hover:border-shinsegae-gold/60 hover:bg-black/50 transition flex items-start gap-4 group"
+            >
+              <span class="px-2.5 py-1 bg-shinsegae-burgundy/70 text-stone-200 text-xs font-mono font-bold rounded-lg group-hover:bg-shinsegae-burgundy transition">
+                00-05s
+              </span>
+              <div class="flex-1 min-w-0">
+                <div class="text-sm font-bold text-white group-hover:text-shinsegae-lightgold transition flex items-center justify-between">
+                  <span>양손 가득 짐을 들고 있는 칭칭</span>
+                  <i class="fa-solid fa-play text-xs opacity-0 group-hover:opacity-100 text-shinsegae-gold transition"></i>
+                </div>
+                <p class="text-xs text-stone-400 mt-0.5 line-clamp-1">
+                  타깃 페르소나의 불편함(쇼핑백 증가와 무거운 캐리어) 공감대 유도 (Hook)
+                </p>
+              </div>
+            </button>
+
+            <!-- Chapter 2 -->
+            <button 
+              type="button" 
+              onclick="seekToSeconds(15)" 
+              class="w-full text-left p-3.5 rounded-2xl bg-black/30 border border-white/5 hover:border-shinsegae-gold/60 hover:bg-black/50 transition flex items-start gap-4 group"
+            >
+              <span class="px-2.5 py-1 bg-shinsegae-burgundy/70 text-stone-200 text-xs font-mono font-bold rounded-lg group-hover:bg-shinsegae-burgundy transition">
+                15-20s
+              </span>
+              <div class="flex-1 min-w-0">
+                <div class="text-sm font-bold text-white group-hover:text-shinsegae-lightgold transition flex items-center justify-between">
+                  <span>찾았다, 러기지패스! (웰컴센터 접수)</span>
+                  <i class="fa-solid fa-play text-xs opacity-0 group-hover:opacity-100 text-shinsegae-gold transition"></i>
+                </div>
+                <p class="text-xs text-stone-400 mt-0.5 line-clamp-1">
+                  백화점 웰컴센터에서 패스 발급 및 캐리어 위탁으로 극적 전환
+                </p>
+              </div>
+            </button>
+
+            <!-- Chapter 3 -->
+            <button 
+              type="button" 
+              onclick="seekToSeconds(24)" 
+              class="w-full text-left p-3.5 rounded-2xl bg-black/30 border border-white/5 hover:border-shinsegae-gold/60 hover:bg-black/50 transition flex items-start gap-4 group"
+            >
+              <span class="px-2.5 py-1 bg-shinsegae-burgundy/70 text-stone-200 text-xs font-mono font-bold rounded-lg group-hover:bg-shinsegae-burgundy transition">
+                24-32s
+              </span>
+              <div class="flex-1 min-w-0">
+                <div class="text-sm font-bold text-white group-hover:text-shinsegae-lightgold transition flex items-center justify-between">
+                  <span>러기지패스 하나면 결제·집결도 한 번에</span>
+                  <i class="fa-solid fa-play text-xs opacity-0 group-hover:opacity-100 text-shinsegae-gold transition"></i>
+                </div>
+                <p class="text-xs text-stone-400 mt-0.5 line-clamp-1">
+                  모션 그래픽 연출로 매장별 구매품 자동 집결 & 결제 편리함 시각화
+                </p>
+              </div>
+            </button>
+
+            <!-- Chapter 4 -->
+            <button 
+              type="button" 
+              onclick="seekToSeconds(38)" 
+              class="w-full text-left p-3.5 rounded-2xl bg-black/30 border border-white/5 hover:border-shinsegae-gold/60 hover:bg-black/50 transition flex items-start gap-4 group"
+            >
+              <span class="px-2.5 py-1 bg-shinsegae-burgundy/70 text-stone-200 text-xs font-mono font-bold rounded-lg group-hover:bg-shinsegae-burgundy transition">
+                38-50s
+              </span>
+              <div class="flex-1 min-w-0">
+                <div class="text-sm font-bold text-white group-hover:text-shinsegae-lightgold transition flex items-center justify-between">
+                  <span>STEP 3. 공항 수령 & 상황 역전 해피엔딩</span>
+                  <i class="fa-solid fa-play text-xs opacity-0 group-hover:opacity-100 text-shinsegae-gold transition"></i>
+                </div>
+                <p class="text-xs text-stone-400 mt-0.5 line-clamp-1">
+                  인천공항 데스크에서 가볍게 원스톱 픽업 완료 후 귀국 (Before & After)
+                </p>
+              </div>
+            </button>
+          </div>
+
+          <!-- Video Specs Box -->
+          <div class="mt-6 p-4 rounded-2xl bg-shinsegae-darkgreen/70 border border-shinsegae-gold/20 flex flex-wrap items-center justify-between text-xs gap-3">
+            <div class="flex items-center gap-2 text-stone-300">
+              <i class="fa-solid fa-check-circle text-shinsegae-gold"></i>
+              <span><strong>영상 파일명:</strong> 영상 완성도.mp4 (H.264 / AAC, 9:16, 50s)</span>
+            </div>
+            <div class="text-stone-400">
+              전 구간 무음 대비 한글/영문 자막 탑재
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="py-24 bg-shinsegae-green/30 border-b border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs uppercase tracking-[0.25em] font-serif text-shinsegae-gold font-bold">CORE VALUES</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">
+          신세계 LUGGAGE PASS <span class="gold-gradient-text">4대 혁신 기능</span>
+        </h2>
+        <p class="text-sm sm:text-base text-stone-300 mt-3 font-light">
+          사는 건 고객이, 들고 다니는 건 백화점이 대신해 드립니다.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- PAY -->
+        <div class="rounded-3xl bg-shinsegae-cardbg p-7 border border-shinsegae-gold/20 hover:border-shinsegae-gold transition-all duration-300 group hover:-translate-y-1">
+          <div class="w-14 h-14 rounded-2xl bg-shinsegae-green border border-shinsegae-gold/30 flex items-center justify-center text-shinsegae-gold text-2xl mb-6 group-hover:scale-110 transition">
+            <i class="fa-regular fa-credit-card"></i>
+          </div>
+          <span class="text-xs font-mono font-bold tracking-wider text-shinsegae-gold uppercase">01 / PAY</span>
+          <h3 class="text-xl font-bold text-white mt-1 mb-3">선충전 간편 통합 결제</h3>
+          <p class="text-stone-300 text-xs sm:text-sm leading-relaxed">
+            복잡한 환전이나 해외 결제 수수료 부담 없이 전용 카드로 원스톱 결제 및 세금 환급(Tax Refund)까지 자동 연동됩니다.
+          </p>
+        </div>
+
+        <!-- COLLECT -->
+        <div class="rounded-3xl bg-shinsegae-cardbg p-7 border border-shinsegae-gold/20 hover:border-shinsegae-gold transition-all duration-300 group hover:-translate-y-1">
+          <div class="w-14 h-14 rounded-2xl bg-shinsegae-green border border-shinsegae-gold/30 flex items-center justify-center text-shinsegae-gold text-2xl mb-6 group-hover:scale-110 transition">
+            <i class="fa-solid fa-boxes-packing"></i>
+          </div>
+          <span class="text-xs font-mono font-bold tracking-wider text-shinsegae-gold uppercase">02 / COLLECT</span>
+          <h3 class="text-xl font-bold text-white mt-1 mb-3">구매품 자동 집결 시스템</h3>
+          <p class="text-stone-300 text-xs sm:text-sm leading-relaxed">
+            각 층 명품관, 패션, 코스메틱 매장에서 쇼핑 후 패스만 태그하면 쇼핑백을 직접 들고 다닐 필요 없이 배송 센터로 자동 집결됩니다.
+          </p>
+        </div>
+
+        <!-- DELIVER -->
+        <div class="rounded-3xl bg-shinsegae-cardbg p-7 border border-shinsegae-gold/20 hover:border-shinsegae-gold transition-all duration-300 group hover:-translate-y-1">
+          <div class="w-14 h-14 rounded-2xl bg-shinsegae-green border border-shinsegae-gold/30 flex items-center justify-center text-shinsegae-gold text-2xl mb-6 group-hover:scale-110 transition">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <span class="text-xs font-mono font-bold tracking-wider text-shinsegae-gold uppercase">03 / DELIVER</span>
+          <h3 class="text-xl font-bold text-white mt-1 mb-3">캐리어·쇼핑백 공항 직송</h3>
+          <p class="text-stone-300 text-xs sm:text-sm leading-relaxed">
+            무거운 여행 캐리어와 쇼핑백을 신세계 전용 보안 물류 차량을 통해 출국 당일 인천공항 공식 수령 카운터로 안전하게 전달합니다.
+          </p>
+        </div>
+
+        <!-- MEMBERSHIP -->
+        <div class="rounded-3xl bg-shinsegae-cardbg p-7 border border-shinsegae-gold/20 hover:border-shinsegae-gold transition-all duration-300 group hover:-translate-y-1">
+          <div class="w-14 h-14 rounded-2xl bg-shinsegae-green border border-shinsegae-gold/30 flex items-center justify-center text-shinsegae-gold text-2xl mb-6 group-hover:scale-110 transition">
+            <i class="fa-solid fa-crown"></i>
+          </div>
+          <span class="text-xs font-mono font-bold tracking-wider text-shinsegae-gold uppercase">04 / MEMBERSHIP</span>
+          <h3 class="text-xl font-bold text-white mt-1 mb-3">글로벌 프리미엄 혜택</h3>
+          <p class="text-stone-300 text-xs sm:text-sm leading-relaxed">
+            신세계 VIP 라운지 이용권, 웰컴 프리미엄 티 세트, 제휴 브랜드 시크릿 바우처 등 외국인 FIT 여행객 맞춤형 리워드를 제공합니다.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="py-24 border-b border-stone-800 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs uppercase tracking-[0.25em] font-serif text-shinsegae-gold font-bold">HOW IT WORKS</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">
+          간편한 <span class="gold-gradient-text">5단계 이용 방법</span>
+        </h2>
+        <p class="text-stone-300 text-sm sm:text-base mt-3">맡기고 쇼핑하고, 공항에서 한 번에 찾으세요.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+        
+        <!-- Step 1 -->
+        <div class="p-6 rounded-2xl bg-black/40 border border-stone-800 text-center relative group hover:border-shinsegae-gold/50 transition">
+          <div class="w-10 h-10 rounded-full bg-shinsegae-burgundy text-white font-bold text-sm flex items-center justify-center mx-auto mb-4 border border-shinsegae-gold/40">
+            1
+          </div>
+          <h4 class="font-bold text-white text-base mb-2">예약 및 패스 발급</h4>
+          <p class="text-xs text-stone-400 leading-relaxed">
+            온라인 사전 예약 또는 백화점 1F 웰컴센터 현장 발급
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="p-6 rounded-2xl bg-black/40 border border-stone-800 text-center relative group hover:border-shinsegae-gold/50 transition">
+          <div class="w-10 h-10 rounded-full bg-shinsegae-burgundy text-white font-bold text-sm flex items-center justify-center mx-auto mb-4 border border-shinsegae-gold/40">
+            2
+          </div>
+          <h4 class="font-bold text-white text-base mb-2">캐리어 보관 위탁</h4>
+          <p class="text-xs text-stone-400 leading-relaxed">
+            웰컴센터 전용 데스크에 무거운 캐리어 및 외투 안심 위탁
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="p-6 rounded-2xl bg-black/40 border border-stone-800 text-center relative group hover:border-shinsegae-gold/50 transition">
+          <div class="w-10 h-10 rounded-full bg-shinsegae-burgundy text-white font-bold text-sm flex items-center justify-center mx-auto mb-4 border border-shinsegae-gold/40">
+            3
+          </div>
+          <h4 class="font-bold text-white text-base mb-2">패스 태그 후 핸즈프리</h4>
+          <p class="text-xs text-stone-400 leading-relaxed">
+            매장에서 상품 결제 시 패스 터치, 짐 없이 자유로운 쇼핑
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="p-6 rounded-2xl bg-black/40 border border-stone-800 text-center relative group hover:border-shinsegae-gold/50 transition">
+          <div class="w-10 h-10 rounded-full bg-shinsegae-burgundy text-white font-bold text-sm flex items-center justify-center mx-auto mb-4 border border-shinsegae-gold/40">
+            4
+          </div>
+          <h4 class="font-bold text-white text-base mb-2">구매품 집결 및 직송</h4>
+          <p class="text-xs text-stone-400 leading-relaxed">
+            각 층 구매품 취합 후 전용 물류망을 통해 공항으로 논스톱 이송
+          </p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="p-6 rounded-2xl bg-black/40 border border-stone-800 text-center relative group hover:border-shinsegae-gold/50 transition">
+          <div class="w-10 h-10 rounded-full bg-shinsegae-burgundy text-white font-bold text-sm flex items-center justify-center mx-auto mb-4 border border-shinsegae-gold/40">
+            5
+          </div>
+          <h4 class="font-bold text-white text-base mb-2">공항 데스크 수령</h4>
+          <p class="text-xs text-stone-400 leading-relaxed">
+            출국 수속 전 인천공항 픽업 데스크에서 모든 짐을 한 번에 수령
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="pricing" class="py-24 bg-gradient-to-b from-shinsegae-darkgreen via-[#051812] to-shinsegae-darkgreen">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs uppercase tracking-[0.25em] font-serif text-shinsegae-gold font-bold">PASS OPTIONS</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">
+          여행 일정에 맞는 <span class="gold-gradient-text">패스 선택</span>
+        </h2>
+        <p class="text-stone-300 text-sm sm:text-base mt-3">
+          당일 쇼핑부터 장기 체류 여행객까지 맞춤형 요금제를 제공합니다.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        
+        <!-- Day Pass -->
+        <div class="rounded-3xl bg-shinsegae-cardbg border border-stone-700/80 p-8 flex flex-col justify-between hover:border-shinsegae-gold/60 transition shadow-xl">
+          <div>
+            <div class="inline-block px-3 py-1 bg-shinsegae-burgundy/80 text-white rounded-full text-xs font-semibold uppercase tracking-wider mb-4">
+              DAY PASS
+            </div>
+            <h3 class="text-xl font-bold text-white">당일 쇼핑 고객</h3>
+            <p class="text-xs text-stone-400 mt-1 mb-6">출국 당일 백화점을 방문하는 관광객 맞춤</p>
+            
+            <div class="flex items-baseline gap-1 mb-6">
+              <span class="text-3xl sm:text-4xl font-extrabold text-white">20,000</span>
+              <span class="text-stone-400 text-sm">원</span>
+            </div>
+
+            <ul class="space-y-3 text-xs text-stone-300 border-t border-stone-800 pt-6">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-shinsegae-gold"></i> 당일 캐리어 1개 안심 보관
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-shinsegae-gold"></i> 당일 쇼핑백 무제한 자동 집결
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-shinsegae-gold"></i> 인천공항 당일 야간 직송
+              </li>
+            </ul>
+          </div>
+
+          <button 
+            type="button" 
+            onclick="handlePassBooking('DAY PASS (20,000원)')" 
+            class="mt-8 w-full py-3 rounded-xl bg-stone-800 hover:bg-stone-700 text-white text-xs sm:text-sm font-bold border border-white/10 hover:border-shinsegae-gold transition"
+          >
+            DAY PASS 예약하기
+          </button>
+        </div>
+
+        <!-- Stay Pass (Popular) -->
+        <div class="rounded-3xl bg-shinsegae-cardbg border-2 border-shinsegae-gold p-8 flex flex-col justify-between relative shadow-2xl scale-105 z-10">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-shinsegae-gold to-[#9F7E3C] text-black font-extrabold text-[11px] px-4 py-1 rounded-full uppercase tracking-wider shadow">
+            MOST POPULAR
+          </div>
+
+          <div>
+            <div class="inline-block px-3 py-1 bg-shinsegae-green text-shinsegae-lightgold rounded-full text-xs font-semibold uppercase tracking-wider mb-4 border border-shinsegae-gold/40">
+              STAY PASS
+            </div>
+            <h3 class="text-xl font-bold text-white">최대 7일 반복 이용</h3>
+            <p class="text-xs text-stone-300 mt-1 mb-6">서울/부산 도심 여행 중 다회차 쇼핑 고객</p>
+            
+            <div class="flex items-baseline gap-1 mb-6">
+              <span class="text-3xl sm:text-4xl font-extrabold text-shinsegae-lightgold">35,000</span>
+              <span class="text-stone-400 text-sm">원</span>
+            </div>
+
+            <ul class="space-y-3 text-xs text-stone-200 border-t border-shinsegae-gold/30 pt-6">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-shinsegae-gold"></i> 7일간 캐리어 다회차 보관
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-shinsegae-gold"></i> 전 매장 쇼핑백 자동 집결
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-shinsegae-gold"></i> 공항 지정일 직송 배송 1회 포함
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-shinsegae-gold"></i> 신세계 멤버스 바 음료 쿠폰 2매
+              </li>
+            </ul>
+          </div>
+
+          <button 
+            type="button" 
+            onclick="handlePassBooking('STAY PASS (35,000원)')" 
+            class="mt-8 w-full py-3.5 rounded-xl bg-gradient-to-r from-shinsegae-gold to-[#a9833a] text-black font-extrabold text-xs sm:text-sm hover:brightness-110 transition shadow-lg"
+          >
+            지금 STAY PASS 예약하기
+          </button>
+        </div>
+
+        <!-- Premium Pass -->
+        <div class="rounded-3xl bg-shinsegae-cardbg border border-stone-700/80 p-8 flex flex-col justify-between hover:border-shinsegae-gold/60 transition shadow-xl">
+          <div>
+            <div class="inline-block px-3 py-1 bg-shinsegae-gold/20 text-shinsegae-lightgold rounded-full text-xs font-semibold uppercase tracking-wider mb-4 border border-shinsegae-gold/30">
+              PREMIUM PASS
+            </div>
+            <h3 class="text-xl font-bold text-white">우선 배송 & 라운지 혜택</h3>
+            <p class="text-xs text-stone-400 mt-1 mb-6">VIP 수준의 쇼핑 컨시어지를 원하는 고객</p>
+            
+            <div class="flex items-baseline gap-1 mb-6">
+              <span class="text-3xl sm:text-4xl font-extrabold text-white">50,000</span>
+              <span class="text-stone-400 text-sm">원</span>
+            </div>
+
+            <ul class="space-y-3 text-xs text-stone-300 border-t border-stone-800 pt-6">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-shinsegae-gold"></i> 캐리어 2개 + 쇼핑백 우선 배송
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-shinsegae-gold"></i> 신세계 글로벌 VIP 라운지 1회 무료 입장
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-shinsegae-gold"></i> 웰컴 프리미엄 기프트 패키지 증정
+              </li>
+            </ul>
+          </div>
+
+          <button 
+            type="button" 
+            onclick="handlePassBooking('PREMIUM PASS (50,000원)')" 
+            class="mt-8 w-full py-3 rounded-xl bg-stone-800 hover:bg-stone-700 text-white text-xs sm:text-sm font-bold border border-white/10 hover:border-shinsegae-gold transition"
+          >
+            PREMIUM PASS 예약하기
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-black border-t border-stone-800 py-12 text-stone-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="text-center md:text-left">
+        <div class="font-serif text-sm tracking-widest text-shinsegae-gold font-bold uppercase mb-1">
+          SHINSEGAE DEPARTMENT STORE
+        </div>
+        <p class="text-stone-500">
+          신세계 퓨처앤드림 아카데미 | 부산대학교 2조 아이디어톤 — LUGGAGE PASS 프로젝트
+        </p>
+        <p class="text-stone-600 mt-1">
+          캠페인 슬로건: 쇼핑은 더 많이, 짐은 더 가볍게 (Shop more. Carry less.)
+        </p>
+      </div>
+
+      <div class="flex items-center gap-6 text-stone-400">
+        <a href="#hero" class="hover:text-shinsegae-gold transition">홈으로</a>
+        <a href="#video-section" class="hover:text-shinsegae-gold transition">홍보 쇼츠</a>
+        <a href="#features" class="hover:text-shinsegae-gold transition">서비스 안내</a>
+        <a href="#pricing" class="hover:text-shinsegae-gold transition">패스 요금</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Elements
+    const video = document.getElementById('shortsVideo');
+    const bigPlayButton = document.getElementById('bigPlayButton');
+    const bigPlayIcon = document.getElementById('bigPlayIcon');
+    const mainPlayToggleBtn = document.getElementById('mainPlayToggleBtn');
+    const btnPlayIcon = document.getElementById('btnPlayIcon');
+    const btnPlayText = document.getElementById('btnPlayText');
+    const muteToggleBtn = document.getElementById('muteToggleBtn');
+    const muteIcon = document.getElementById('muteIcon');
+    const currentTimeDisplay = document.getElementById('currentTimeDisplay');
+    const durationDisplay = document.getElementById('durationDisplay');
+    const videoProgressBar = document.getElementById('videoProgressBar');
+    const localVideoPicker = document.getElementById('localVideoPicker');
+
+    // Time Format Helper (00:00)
+    function formatTime(seconds) {
+      if (isNaN(seconds)) return "00:00";
+      const mins = Math.floor(seconds / 60);
+      const secs = Math.floor(seconds % 60);
+      return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+    }
+
+    // Toggle Play / Pause
+    function toggleVideoPlay() {
+      if (video.paused || video.ended) {
+        video.play().then(() => {
+          updatePlayUI(true);
+        }).catch(err => {
+          console.warn("Autoplay block or missing file:", err);
+          updatePlayUI(false);
+          // Gently inform user
+          showNotice("영상이 아직 선택되지 않았거나 브라우저 정책으로 차단되었습니다. 아래 '내 컴퓨터에서 영상 파일 불러오기' 버튼을 사용해보세요.");
+        });
+      } else {
+        video.pause();
+        updatePlayUI(false);
+      }
+    }
+
+    // Update UI based on Play state
+    function updatePlayUI(isPlaying) {
+      if (isPlaying) {
+        bigPlayButton.style.display = 'none';
+        btnPlayIcon.className = "fa-solid fa-pause";
+        btnPlayText.textContent = "일시정지";
+      } else {
+        bigPlayButton.style.display = 'flex';
+        btnPlayIcon.className = "fa-solid fa-play";
+        btnPlayText.textContent = "쇼츠 영상 재생";
+      }
+    }
+
+    // Event Listeners for Player
+    video.addEventListener('click', toggleVideoPlay);
+    bigPlayButton.addEventListener('click', toggleVideoPlay);
+    mainPlayToggleBtn.addEventListener('click', toggleVideoPlay);
+
+    // Mute / Unmute
+    muteToggleBtn.addEventListener('click', () => {
+      video.muted = !video.muted;
+      if (video.muted) {
+        muteIcon.className = "fa-solid fa-volume-xmark";
+      } else {
+        muteIcon.className = "fa-solid fa-volume-high";
+      }
+    });
+
+    // Time Progress Updates
+    video.addEventListener('timeupdate', () => {
+      currentTimeDisplay.textContent = formatTime(video.currentTime);
+      if (video.duration) {
+        const percentage = (video.currentTime / video.duration) * 100;
+        videoProgressBar.style.width = `${percentage}%`;
+      }
+    });
+
+    video.addEventListener('loadedmetadata', () => {
+      durationDisplay.textContent = formatTime(video.duration || 50);
+    });
+
+    video.addEventListener('ended', () => {
+      updatePlayUI(false);
+      videoProgressBar.style.width = '0%';
+    });
+
+    // Seek to specific seconds from timeline buttons
+    window.seekToSeconds = function(seconds) {
+      if (!video) return;
+      video.currentTime = seconds;
+      if (video.paused) {
+        video.play().then(() => updatePlayUI(true)).catch(() => updatePlayUI(false));
+      }
+      // Scroll smoothly to video section if not fully in view
+      const videoSection = document.getElementById('video-section');
+      if (videoSection) {
+        videoSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
+    // Handling Local Upload ( 영상 완성도.mp4 file picker )
+    localVideoPicker.addEventListener('change', function(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      // Revoke previous blob URL if any to free memory
+      if (video.src && video.src.startsWith('blob:')) {
+        URL.revokeObjectURL(video.src);
+      }
+
+      // Create new blob object URL from chosen file
+      const objectUrl = URL.createObjectURL(file);
+      video.src = objectUrl;
+      video.load();
+
+      video.onloadeddata = () => {
+        video.play().then(() => {
+          updatePlayUI(true);
+          showNotice(`선택된 파일 [${file.name}] 재생을 시작합니다.`);
+        }).catch(err => {
+          console.warn("Play after load failed:", err);
+          updatePlayUI(false);
+        });
+      };
+    });
+
+    // Custom Toast Notice (never alert)
+    function showNotice(message) {
+      let toast = document.getElementById('customToast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'customToast';
+        toast.className = 'fixed bottom-6 right-6 z-50 max-w-sm bg-stone-900 border border-shinsegae-gold text-white px-4 py-3 rounded-2xl shadow-2xl text-xs flex items-center gap-3 transition-opacity duration-300';
+        document.body.appendChild(toast);
+      }
+      toast.innerHTML = `<i class="fa-solid fa-circle-info text-shinsegae-gold text-base"></i><span>${message}</span>`;
+      toast.style.opacity = '1';
+      setTimeout(() => {
+        toast.style.opacity = '0';
+      }, 4000);
+    }
+
+    // Pass Booking Modal simulation
+    window.handlePassBooking = function(passName) {
+      showNotice(`${passName} 사전 예약 창으로 연결됩니다. (현장 웰컴센터 및 온라인 수령 가능)`);
+    };
+  </script>
+</body>
+</html>
